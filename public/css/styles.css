@@ -38,6 +38,10 @@ header {
   color: #ffffff;
 }
 
+.button-cancel {
+  border-radius: 10px;
+}
+
 .text-login {
   color: #ffffff;
   font-size: 18px;

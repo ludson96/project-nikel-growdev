@@ -23,7 +23,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-          <div class="d-flex">
+          <div class="d-flex menu">
             <a href="home.html">
               <button class="btn" type="button">
                 <i class="bi bi-house-door-fill fs-4"></i>
@@ -38,8 +38,8 @@
               <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="bi bi-person-circle fs-4"></i>
               </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Sair</a></li>
+              <ul class="dropdown-menu logout">
+                <li><a class="dropdown-item" id="button-logout">Sair</a></li>
               </ul>
             </div>
           </div>
@@ -74,13 +74,8 @@
                       <th scope="col">Descrição</th>
                     </tr>
                   </thead>
-                  <tbody class="table-group-divider">
-                    <tr>
-                      <th scope="row">08/11/2021</th>
-                      <td>50.00</td>
-                      <td>Saída</td>
-                      <td>Gasolina</td>
-                    </tr>
+                  <tbody class="table-group-divider" id="transactions-list">
+
                   </tbody>
                 </table>
               </div>
@@ -88,12 +83,12 @@
           </div>
         </div>
       </div>
-      <button class="btn button-float" data-bs-toggle="modal" data-bs-target="#transactions-modal"><i
+      <button class="btn button-float" data-bs-toggle="modal" data-bs-target="#transaction-modal"><i
           class="bi bi-plus"></i></button>
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="transactions-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" id="transaction-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
       aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -105,7 +100,7 @@
             <div class="modal-body">
               <div class="mb-3">
                 <label for="value-input" class="form-label">Valor</label>
-                <input type="number" class="form-control" id="value-input" aria-describedby="emailHelp">
+                <input type="number" step="any" class="form-control" id="value-input" aria-describedby="emailHelp">
               </div>
               <div class="mb-3">
                 <label for="description-input" class="form-label">Descrição</label>
@@ -139,6 +134,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
+  <script src="js/transactions.js"></script>
 </body>
 
 </html>
